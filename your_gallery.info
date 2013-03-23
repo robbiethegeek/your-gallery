@@ -1,0 +1,8 @@
+name = Your Gallery
+description = Simple module for the menu item / redirect for you :)
+
+version = "7.x-1.0"
+core = "7.x"
+project = "your_gallery"
+
+

@@ -1,0 +1,19 @@
+<?php
+function your_gallery_menu() {
+    $items['your-gallery'] = array(
+        'page callback' => 'your_gallery_check',
+        'title' => 'Your Gallery',
+        'type' => MENU_NORMAL_ITEM,
+            'access callback' => TRUE,
+    );
+    return $items;
+}
+
+function your_gallery_check() {
+  global $user;
+  if (user_is_anonymous()) {
+      drupal_goto('login-gallery');
+  } else {
+      drupal_goto('your-gallery/' . $user->uid);      
+  }
+}
